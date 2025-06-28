@@ -45,7 +45,7 @@ close all; clear all; clc
 % 13: Bumpy-Snake Dataset (test)(3D) -- 10 trajectories recorded at 100Hz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 pkg_dir         = pwd;
-chosen_dataset  = 1; 
+chosen_dataset  = 11; 
 sub_sample      = 1; % '>2' for real 3D Datasets, '1' for 2D toy datasets
 nb_trajectories = 7; % For real 3D data
 Data = load_dataset(pkg_dir, chosen_dataset, sub_sample, nb_trajectories);

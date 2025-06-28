@@ -52,11 +52,12 @@ eval(['mex' flags '-c util.c']);
 libdir = '';
 if ispc
     if (v(1)==9)
-        flags = ' -R2018a ';
+        flags = ' -R2017b ';
     end
     
 	[compiler,options] = mexcompiler;
-	libdir = options.LIBLOC;
+	%libdir = options.LIBLOC;
+    libdir = fullfile(matlabroot, 'extern', 'lib', computer('arch'), 'microsoft');
 	engmatopts = [compiler 'engmatopts.bat'];
     
 elseif ismac
@@ -136,7 +137,8 @@ if ispc
   eval(['mex' flags 'digamma.c util.obj'])
   eval(['mex' flags 'trigamma.c util.obj'])
   eval(['mex' flags 'tetragamma.c util.obj'])
-	eval(['mex' flags 'setnonzeros.c'])
+% 	eval(['mex' flags 'setnonzeros.c'])
+eval(['mex' flags 'setnonzeros.c'])
   if strncmp(compiler,'MSVC',4)
 		clear random.dll randomseed randbinom randgamma sample_hist
     disp(['install_random.bat "' options.VSINSTALLDIR '" ' options.vcvarsopts]);
