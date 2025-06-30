@@ -36,8 +36,8 @@ close all; clear all; clc
 % 4:  Snake Dataset             (2D)
 % 5:  Messy Snake Dataset       (2D)
 % 6:  Via-Point Dataset         (2D)
-% 7:  L-shape Dataset           (2D)
-% 8:  A-shape Dataset           (2D)
+% 7:  Agular trajectories           (2D)
+% 8:  Linear trajectories           (2D)
 % 9:  S-shape Dataset           (2D)
 % 10: Multi-Behavior Dataset    (2D)
 % 11: Via-point Dataset (test) (3D) -- 15 trajectories recorded at 100Hz
@@ -45,7 +45,7 @@ close all; clear all; clc
 % 13: Bumpy-Snake Dataset (test)(3D) -- 10 trajectories recorded at 100Hz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 pkg_dir         = pwd;
-chosen_dataset  = 11; 
+chosen_dataset  = 7; 
 sub_sample      = 1; % '>2' for real 3D Datasets, '1' for 2D toy datasets
 nb_trajectories = 7; % For real 3D data
 Data = load_dataset(pkg_dir, chosen_dataset, sub_sample, nb_trajectories);

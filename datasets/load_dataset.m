@@ -2,6 +2,10 @@ function [Data] = load_dataset(pkg_dir, dataset, sub_sample, nb_trajectories)
 
 dataset_name = [];
 switch dataset
+    case 7
+         dataset_name = 'processed_gait_data_angular_10_samples.mat';
+    case 8
+         dataset_name = 'linear_kinematics_gait_cycles_10_samples.mat';
     case 1
         dataset_name = '2D_concentric.mat';   
     case 2
@@ -14,10 +18,10 @@ switch dataset
         dataset_name = '2D_messy-snake.mat';
     case 6 
         dataset_name = '2D_viapoint.mat';
-    case 7
-        dataset_name = '2D_Lshape.mat';
-    case 8
-        dataset_name = '2D_Ashape.mat';
+%     case 7
+%         dataset_name = '2D_Lshape.mat';
+%     case 8
+%         dataset_name = '2D_Ashape.mat';
     case 9
         dataset_name = '2D_Sshape.mat';
     case 10

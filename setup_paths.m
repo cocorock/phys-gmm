@@ -5,4 +5,4 @@ addpath(genpath('C:\Users\quepe\Documents\GitHub\phys-gmm\thirdparty\crp\distrib
 
 addpath(genpath('C:\Users\quepe\Documents\GitHub\phys-gmm\thirdparty\crp\utilities'))
 
-test_sampler
+addpath(genpath('C:\Users\quepe\Documents\GitHub\ds-opt'))
